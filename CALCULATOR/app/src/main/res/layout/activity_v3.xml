@@ -19,22 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.118" />
 
-    <Button
-        android:id="@+id/Fac"
-        android:layout_width="230dp"
-        android:layout_height="69dp"
-        android:backgroundTint="#F60202"
-        android:text="Factorial"
-        app:cornerRadius="15px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
-
     <EditText
-        android:id="@+id/N3"
+        android:id="@+id/N4"
         android:layout_width="254dp"
         android:layout_height="101dp"
         android:ems="10"
@@ -48,8 +34,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.296" />
 
+    <Button
+        android:id="@+id/Fib"
+        android:layout_width="224dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#F40404"
+        android:text="Fibonacci"
+        app:cornerRadius="15px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
     <TextView
-        android:id="@+id/RST"
+        android:id="@+id/RST2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Resultado"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.748" />
 
     <Button
-        android:id="@+id/back"
+        android:id="@+id/back2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF0724"

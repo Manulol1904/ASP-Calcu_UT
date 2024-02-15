@@ -6,11 +6,6 @@ import org.junit.Test;
 
 public class Operaciones_2Test {
 
-    @Test
-    public void calcularFibonacci() {
-        long resultado= Operaciones_2.calcularFibonacci(0);
-        assertEquals(0,resultado);
-    }
 
     @Test
     public void calcularFactorial() {

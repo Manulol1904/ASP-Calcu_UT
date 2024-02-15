@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CALCULATOR"
         tools:targetApi="31">
         <activity
+            android:name=".V3"
+            android:exported="false" />
+        <activity
             android:name=".Operaciones_2"
             android:exported="false" />
         <activity

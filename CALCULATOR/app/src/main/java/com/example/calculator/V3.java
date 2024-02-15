@@ -9,55 +9,51 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Operaciones_2 extends AppCompatActivity {
+public class V3 extends AppCompatActivity {
 
     EditText N3;
 
-    Button Facto,Back ;
+    Button Fibo,Back ;
 
     static TextView resul;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_operaciones2);
+        setContentView(R.layout.activity_v3);
 
-        N3=findViewById(R.id.N3);
-        Facto= findViewById(R.id.Fac);
-        Back=findViewById(R.id.back);
-        resul=findViewById(R.id.RST);
+        N3=findViewById(R.id.N4);
+        Fibo= findViewById(R.id.Fib);
+        Back=findViewById(R.id.back2);
+        resul=findViewById(R.id.RST2);
 
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Operaciones_2.this,MainActivity.class);
+                Intent intent = new Intent(V3.this,MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        Facto.setOnClickListener(new View.OnClickListener() {
+        Fibo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String numero3Str = N3.getText().toString();
-                calcular("FT", numero3Str);
-
+                calcular("FB", numero3Str);
             }
         });
 
 
-
     }
 
+    public static long calcularFibonacci(int n){
 
-    public static int factorial(int n) {
-        if (n == 0) {
-            return 1;
+        if ( n>-1 && n <= 1) {
+            return n;
         } else {
-            return n * factorial(n - 1);
+            return calcularFibonacci(n - 1) + calcularFibonacci(n - 2);
         }
     }
-
-
 
     public static void calcular(String operador, String numero1Str) {
         if (!numero1Str.isEmpty()) {
@@ -65,13 +61,14 @@ public class Operaciones_2 extends AppCompatActivity {
             long resultadoCalculado = 0;
 
             switch (operador) {
-                case "FT":
-                    if (numero1 > 0){
-                        resultadoCalculado = factorial(numero1);
+                case "FB":
+                    if (numero1 >= 0){
+                        resultadoCalculado = calcularFibonacci(numero1);
                     }
                     else{
-                        resul.setText("Error, numero debe ser mayor a cero");
+                        resul.setText("Error, numero debe ser mayor o igual a cero");
                         return;
+
                     }
                     break;
             }

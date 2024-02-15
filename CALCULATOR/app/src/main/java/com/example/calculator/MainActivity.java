@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText n1;
     EditText n2;
-    Button suma, resta, multi, div, potencia, MOP;
+    Button suma, resta, multi, div, potencia, MOP,MOP2;
     static TextView resultado;
 
     @Override
@@ -28,12 +28,21 @@ public class MainActivity extends AppCompatActivity {
         div = findViewById(R.id.Div);
         potencia = findViewById(R.id.Potencia);
         MOP=findViewById(R.id.MOP);
+        MOP2=findViewById(R.id.MOP2);
         resultado = findViewById(R.id.Resultado);
 
         MOP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Operaciones_2.class);
+                startActivity(intent);
+            }
+        });
+
+        MOP2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, V3.class);
                 startActivity(intent);
             }
         });
